@@ -1,0 +1,39 @@
+<div>
+  <div class="card-group">
+    <div class="card" style="width:400px" *ngFor="let x of arrayData2">
+      <img class="card-img-top" [src]="x.strMealThumb" width="180px" height="180px" alt="Card image cap">
+      <div class="card-body">
+        <h2 class="card-title">{{x.idMeal}}</h2>
+        <h5 class="card-title">{{x.strMeal}}</h5>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col=md-4" style="height: 100%;width: 108px;">
+      <div class="card" *ngFor="let x of arrayData2">
+        <img class="card-img-top" [src]="x.strMealThumb" alt="Card image" style="width:100%">
+        <div class="card-body">
+          <h4 class="card-title">John Doe</h4>
+          <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+          <a href="#" class="btn btn-primary">See Profile</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="column">
+    <div class="card" *ngFor="let x of arrayData2">
+      <img class="card-img-top" [src]="x.strMealThumb" alt="Card image" style="width:100%">
+      <div class="card-body">
+        <h4 class="card-title">John Doe</h4>
+        <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+        <a href="#" class="btn btn-primary">See Profile</a>
+      </div>
+    </div>
+  </div>
+</div>
