@@ -1,10 +1,26 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { SampleService } from './services/sample.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'sampleproject1';
+  arrayData =[];
+  constructor(private service:SampleService){
+
+  }
+  ngOnInit(){
+    this.getApiData();
+  }
+
+  getApiData(){
+    this.service.getDetails()
+    .subscribe(res => {
+      console.log(res.meals);
+     this.arrayData = [...res.meals];
+    })
+  }
 }

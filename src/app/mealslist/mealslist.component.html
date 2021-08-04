@@ -1,0 +1,16 @@
+<div class="container">
+  <h2 align="center">Meals Category List:</h2><br>
+  <table class="table">
+    <tr align="center">
+      <th>Meal id</th>
+      <th>Meal Name:</th>
+      <th>Meal Thumb:</th>
+    </tr>
+    <tr *ngFor="let x of arrayData2" align="center">
+      <td>{{x.idMeal}}</td>
+      <td>{{x.strMeal}}</td>
+      <td><img [src]="x.strMealThumb" width="80px" height="80px"></td>
+    </tr>
+  </table>
+</div>
+
