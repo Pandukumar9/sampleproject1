@@ -7,11 +7,15 @@ import {HttpClientModule} from '@angular/common/http';
 import { SampleService } from './services/sample.service';
 import { MealslistComponent } from './mealslist/mealslist.component';
 import { MealsComponent } from './meals/meals.component';
+import { CustampipePipe } from './custampipe.pipe';
+import { CustamdirectiveDirective } from './custamdirective.directive';
 @NgModule({
   declarations: [
     AppComponent,
     MealslistComponent,
-    MealsComponent
+    MealsComponent,
+    CustampipePipe,
+    CustamdirectiveDirective
   ],
   imports: [
     BrowserModule,
