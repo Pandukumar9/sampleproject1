@@ -1,0 +1,19 @@
+<div>  
+  <select [(ngModel)] ="myColor">  
+    <option value='' selected> Select Color </option>  
+    <option *ngFor = "let color of colors" [value] = "color">  
+        {{color}}  
+    </option>  
+  </select>  
+<p [appDynamiccolor]="myColor" defaultValue="red"> dynamicColor Directive Demo</p>  
+</div> 
+
+<br>
+
+<p appMouse>mouseAction Directive Demo</p> 
+
+<br>
+
+<h4 appCustomTheme>heLLO THIS IS custam theme</h4>
+<div appCustomTheme> customTheme Directive Demo with Default Settings</div>  
+<div appCustomTheme tcolor="yellow" bcolor="black" tsize="50px">customTheme Directive Demo with Custom Settings</div> 
