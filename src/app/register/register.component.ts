@@ -24,6 +24,6 @@ export class RegisterComponent implements OnInit {
     mobilenumber: new FormControl('',[Validators.required,Validators.minLength(10),Validators.pattern(/^[a-z]{0,10}$/)]),
     password: new FormControl('',[Validators.required]),
     confirmpassword: new FormControl('',[Validators.required])
-  },{validator:passwordvalidator});
+  },{validators:passwordvalidator});
 
 }
