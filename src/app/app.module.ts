@@ -12,9 +12,10 @@ import { CustamdirectiveDirective } from './custamdirective.directive';
 import { CreateEmployeeComponent } from './create-employee/create-employee.component';
 import { DynamiccolorComponent } from './dynamiccolor/dynamiccolor.component';
 import { DynamiccolorDirective } from './dynamiccolor.directive';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MouseDirective } from './mouse.directive';
 import { CustomThemeDirective } from './custom-theme.directive';
+import { RegisterComponent } from './register/register.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,13 +27,15 @@ import { CustomThemeDirective } from './custom-theme.directive';
     DynamiccolorComponent,
     DynamiccolorDirective,
     MouseDirective,
-    CustomThemeDirective
+    CustomThemeDirective,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [SampleService],
   bootstrap: [AppComponent]

@@ -1,0 +1,49 @@
+<div class="container">
+  <form [formGroup]="regsiterForm">
+    <div class="form-group">
+      <label for="fname">Firstname:</label>
+      <input type="text" formControlName="firstname" class="form-control" id="fname" 
+      [class.is-invalid]="regsiterForm.get('firstname').invalid && regsiterForm.get('firstname').touched">
+      <small [class.d-none]="regsiterForm.get('firstname').value || regsiterForm.get('firstname').untouched" class="text-danger">
+             Firstname is required
+      </small>
+    </div>
+    <div class="form-group">
+      <label for="lname">Lastname:</label>
+      <input type="text" formControlName="lastname" class="form-control" id="lname" required
+      [class.is-invalid]="regsiterForm.get('lastname').invalid && regsiterForm.get('lastname').touched">
+      <small [class.d-none]="regsiterForm.get('lastname').value || regsiterForm.get('lastname').untouched" class="text-danger">
+        Lastname is required
+ </small>
+    </div>
+    <div class="form-group">
+      <label for="email">Gmailid:</label>
+      <input type="email" formControlName="gmail" class="form-control" id="email" required>
+    </div>
+    <div class="form-group">
+      <label for="phone">mobileNumber:</label>
+      <input type="tel" formControlName="mobilenumber" class="form-control" id="phone" required>
+      <div *ngIf="regsiterForm.get('mobilenumber').invalid && regsiterForm.get('mobilenumber').touched">
+         <small *ngIf="regsiterForm.get('mobilenumber').errors?.required" class="text-danger">
+           number is required
+         </small>
+         <small *ngIf="regsiterForm.get('mobilenumber').errors?.minlength" class="text-danger">
+         min length number is 10
+        </small>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" formControlName="password" class="form-control" id="password" required>
+    </div>
+    <div class="form-group">
+      <label for="cpassword">Confirm Password:</label>
+      <input type="password" formControlName="confirmpassword" class="form-control" id="cpassword" required
+      [class.is-invalid]="regsiterForm.errors?.misMatch">
+       <small *ngIf="regsiterForm.errors?.misMatch">
+         password not matched
+       </small>
+    </div>
+  </form>
+</div>
+
