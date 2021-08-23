@@ -16,6 +16,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MouseDirective } from './mouse.directive';
 import { CustomThemeDirective } from './custom-theme.directive';
 import { RegisterComponent } from './register/register.component';
+import { ParalinkComponent } from './paralink/paralink.component';
+import { ParalinkPipe } from './paralink.pipe';
+import { InfinitescrollComponent } from './infinitescroll/infinitescroll.component';
+import { ParentComponent } from './ngrx/parent/parent.component';
+import { ChildComponent } from './ngrx/child/child.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,15 +34,19 @@ import { RegisterComponent } from './register/register.component';
     DynamiccolorDirective,
     MouseDirective,
     CustomThemeDirective,
-    RegisterComponent
+    RegisterComponent,
+    ParalinkComponent,
+    ParalinkPipe,
+    InfinitescrollComponent,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
-  ],
+    ReactiveFormsModule  ],
   providers: [SampleService],
   bootstrap: [AppComponent]
 })

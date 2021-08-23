@@ -7,7 +7,7 @@ import { SampleService } from './services/sample.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
-  title = 'sampleproject1';
+  name = '';
   arrayData =[];
   constructor(private service:SampleService){
 

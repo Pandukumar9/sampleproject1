@@ -5,8 +5,16 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class CustampipePipe implements PipeTransform {
 
-  transform(value: unknown, ...args: unknown[]): unknown {
-    return null;
+  transform(str: any): any {
+    let match = str.match(/(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/gi);
+    let final = str;
+    match.map((url:string) => {
+      final = final.replace(
+        url,
+        '<a href="' + url + '" target="_BLANK">' + url + '</a>'
+      );
+    });
+    return final;
   }
 
 }
