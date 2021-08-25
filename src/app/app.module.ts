@@ -21,6 +21,8 @@ import { ParalinkPipe } from './paralink.pipe';
 import { InfinitescrollComponent } from './infinitescroll/infinitescroll.component';
 import { ParentComponent } from './ngrx/parent/parent.component';
 import { ChildComponent } from './ngrx/child/child.component';
+import { Example2Component } from './rxjs/example2/example2.component';
+import { OperatorsComponent } from './rxjs/operators/operators.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import { ChildComponent } from './ngrx/child/child.component';
     ParalinkPipe,
     InfinitescrollComponent,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    Example2Component,
+    OperatorsComponent
   ],
   imports: [
     BrowserModule,
