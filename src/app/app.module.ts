@@ -23,6 +23,8 @@ import { ParentComponent } from './ngrx/parent/parent.component';
 import { ChildComponent } from './ngrx/child/child.component';
 import { Example2Component } from './rxjs/example2/example2.component';
 import { OperatorsComponent } from './rxjs/operators/operators.component';
+import { DoubleclickComponent } from './doubleclick/doubleclick.component';
+import { Opr2Component } from './rxjs/opr2/opr2.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,9 @@ import { OperatorsComponent } from './rxjs/operators/operators.component';
     ParentComponent,
     ChildComponent,
     Example2Component,
-    OperatorsComponent
+    OperatorsComponent,
+    DoubleclickComponent,
+    Opr2Component
   ],
   imports: [
     BrowserModule,
