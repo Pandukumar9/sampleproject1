@@ -1,3 +1,4 @@
+import { stringify } from '@angular/compiler/src/util';
 import { Component, OnInit } from '@angular/core';
 import { SampleService } from './services/sample.service';
 
@@ -14,6 +15,7 @@ export class AppComponent implements OnInit{
   }
   ngOnInit(){
     this.getApiData();
+    this.getApidata2();
   }
 
   getApiData(){
@@ -23,4 +25,29 @@ export class AppComponent implements OnInit{
      this.arrayData = [...res.meals];
     })
   }
+   
+  scholdata: any[]=[];
+  getApidata2(){
+    this.service.geturlData()
+    .subscribe((res:any) => {
+
+      console.log(typeof(res ));
+      this.scholdata.push(res);
+      console.log(this.scholdata );
+
+      let arr = [];  
+      Object.keys(res).map(function(key){  
+          arr.push({[key]:res[key]})  
+          // this.scholdata.push(arr);
+          return arr;  
+      });  
+      console.log('Object=',res)  
+      console.log('Array=',arr) 
+       
+        
+    });
+    
+  }
+
+
 }

@@ -25,6 +25,12 @@ import { Example2Component } from './rxjs/example2/example2.component';
 import { OperatorsComponent } from './rxjs/operators/operators.component';
 import { DoubleclickComponent } from './doubleclick/doubleclick.component';
 import { Opr2Component } from './rxjs/opr2/opr2.component';
+import { TdfformsComponent } from './tdfforms/tdfforms.component';
+import { ReactieformComponent } from './reactieform/reactieform.component';
+import { CassixtemplateComponent } from './cassixtemplate/cassixtemplate.component';
+import { QuetionPaperComponent } from './quetion-paper/quetion-paper.component';
+import { LifecyclehooksComponent } from './lifecyclehooks/lifecyclehooks.component';
+import { ConcatComponent } from './rxjs/concat/concat.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +53,13 @@ import { Opr2Component } from './rxjs/opr2/opr2.component';
     Example2Component,
     OperatorsComponent,
     DoubleclickComponent,
-    Opr2Component
+    Opr2Component,
+    TdfformsComponent,
+    ReactieformComponent,
+    CassixtemplateComponent,
+    QuetionPaperComponent,
+    LifecyclehooksComponent,
+    ConcatComponent
   ],
   imports: [
     BrowserModule,

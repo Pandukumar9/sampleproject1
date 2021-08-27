@@ -31,7 +31,25 @@
  <app-paralink></app-paralink> -->
 
  <!-- <app-infinitescroll></app-infinitescroll> -->
-<input type="text" [(ngModel)]="name">
+<!-- <input type="text" [(ngModel)]="name">
  <app-parent></app-parent>
 
- <app-example2></app-example2>
+ <app-example2></app-example2> -->
+ <ul *ngFor="let x of scholdata">
+   <li>
+    {{x.page}}
+   </li>
+   <li>
+    {{x.per_page}}
+   </li>
+   <li>
+    {{x.total_pages}}
+   </li>
+   <li>
+    {{x[4]}}
+   </li>
+ </ul>
+
+ <app-tdfforms></app-tdfforms>
+
+ <app-reactieform></app-reactieform>
