@@ -31,6 +31,7 @@ import { CassixtemplateComponent } from './cassixtemplate/cassixtemplate.compone
 import { QuetionPaperComponent } from './quetion-paper/quetion-paper.component';
 import { LifecyclehooksComponent } from './lifecyclehooks/lifecyclehooks.component';
 import { ConcatComponent } from './rxjs/concat/concat.component';
+import { SwitchmapComponent } from './rxjs/switchmap/switchmap.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,8 @@ import { ConcatComponent } from './rxjs/concat/concat.component';
     CassixtemplateComponent,
     QuetionPaperComponent,
     LifecyclehooksComponent,
-    ConcatComponent
+    ConcatComponent,
+    SwitchmapComponent
   ],
   imports: [
     BrowserModule,
