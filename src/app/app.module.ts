@@ -32,6 +32,10 @@ import { QuetionPaperComponent } from './quetion-paper/quetion-paper.component';
 import { LifecyclehooksComponent } from './lifecyclehooks/lifecyclehooks.component';
 import { ConcatComponent } from './rxjs/concat/concat.component';
 import { SwitchmapComponent } from './rxjs/switchmap/switchmap.component';
+import { ChipsComponent } from './material/chips/chips.component';
+import { ProjectsComponent } from './eportfolio/projects/projects.component';
+import { DraftsComponent } from './eportfolio/drafts/drafts.component';
+import { HomepageComponent } from './eportfolio/homepage/homepage.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +65,11 @@ import { SwitchmapComponent } from './rxjs/switchmap/switchmap.component';
     QuetionPaperComponent,
     LifecyclehooksComponent,
     ConcatComponent,
-    SwitchmapComponent
+    SwitchmapComponent,
+    ChipsComponent,
+    ProjectsComponent,
+    DraftsComponent,
+    HomepageComponent
   ],
   imports: [
     BrowserModule,
