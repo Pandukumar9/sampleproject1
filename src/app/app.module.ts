@@ -36,6 +36,20 @@ import { ChipsComponent } from './material/chips/chips.component';
 import { ProjectsComponent } from './eportfolio/projects/projects.component';
 import { DraftsComponent } from './eportfolio/drafts/drafts.component';
 import { HomepageComponent } from './eportfolio/homepage/homepage.component';
+import { TdfformComponent } from './forms/tdfform/tdfform.component';
+import { ReactiveformComponent } from './forms/reactiveform/reactiveform.component';
+import { MaterialuiformComponent } from './forms/materialuiform/materialuiform.component';
+import { PopupComponent } from './material/popup/popup.component';
+import { DialogformComponent } from './popup/dialogform/dialogform.component';
+import { SingupComponent } from './admin/singup/singup.component';
+import { SinginComponent } from './admin/singin/singin.component';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { HomeComponent } from './admin/home/home.component';
+import { CompanyComponent } from './task/company/company.component';
+import { IntershipComponent } from './task/intership/intership.component';
+import { NavbarComponent } from './task/navbar/navbar.component';
+// import { AngularFireModule } from '@angular/fire';
+
 
 @NgModule({
   declarations: [
@@ -69,14 +83,32 @@ import { HomepageComponent } from './eportfolio/homepage/homepage.component';
     ChipsComponent,
     ProjectsComponent,
     DraftsComponent,
-    HomepageComponent
+    HomepageComponent,
+    TdfformComponent,
+    ReactiveformComponent,
+    MaterialuiformComponent,
+    PopupComponent,
+    DialogformComponent,
+    SingupComponent,
+    SinginComponent,
+    DashboardComponent,
+    HomeComponent,
+    CompanyComponent,
+    IntershipComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule  ],
+    ReactiveFormsModule,
+    // AngularFireModule,
+    // AngularFireDatabaseModule
+
+    
+    
+   ],
   providers: [SampleService],
   bootstrap: [AppComponent]
 })
