@@ -1,0 +1,12 @@
+<p>homepage1 works!</p>
+
+<button (click)="openPopup(template)">add Student data</button>
+
+<ng-template #template>
+
+
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button>
+</div>
+</ng-template>

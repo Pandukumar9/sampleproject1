@@ -48,7 +48,18 @@ import { HomeComponent } from './admin/home/home.component';
 import { CompanyComponent } from './task/company/company.component';
 import { IntershipComponent } from './task/intership/intership.component';
 import { NavbarComponent } from './task/navbar/navbar.component';
+import { EmployeeComponent } from './task/task2/employee/employee.component';
+import { StudentComponent } from './task/task2/student/student.component';
+import { DialogComponent } from './dialogpop/dialog/dialog.component';
+import { Homepage1Component } from './dialogpop/homepage1/homepage1.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import { AngularFireModule } from '@angular/fire';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatButtonModule} from '@angular/material/button';
+import {MatInputModule} from '@angular/material/input';
+import { CreateEmployeComponent } from './employ/create-employe/create-employe.component';
+import { ListEmployeComponent } from './employ/list-employe/list-employe.component';
 
 
 @NgModule({
@@ -95,7 +106,13 @@ import { NavbarComponent } from './task/navbar/navbar.component';
     HomeComponent,
     CompanyComponent,
     IntershipComponent,
-    NavbarComponent
+    NavbarComponent,
+    EmployeeComponent,
+    StudentComponent,
+    DialogComponent,
+    Homepage1Component,
+    CreateEmployeComponent,
+    ListEmployeComponent
   ],
   imports: [
     BrowserModule,
@@ -103,10 +120,13 @@ import { NavbarComponent } from './task/navbar/navbar.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatDialogModule,
+    MatButtonModule,
     // AngularFireModule,
     // AngularFireDatabaseModule
-
-    
+    MatInputModule,
+    MatFormFieldModule
     
    ],
   providers: [SampleService],
