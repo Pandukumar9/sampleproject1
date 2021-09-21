@@ -60,6 +60,8 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import { CreateEmployeComponent } from './employ/create-employe/create-employe.component';
 import { ListEmployeComponent } from './employ/list-employe/list-employe.component';
+import { TemplateformComponent } from './forms/templateform/templateform.component';
+import { ReativeformingComponent } from './forms/reativeforming/reativeforming.component';
 
 
 @NgModule({
@@ -112,7 +114,9 @@ import { ListEmployeComponent } from './employ/list-employe/list-employe.compone
     DialogComponent,
     Homepage1Component,
     CreateEmployeComponent,
-    ListEmployeComponent
+    ListEmployeComponent,
+    TemplateformComponent,
+    ReativeformingComponent
   ],
   imports: [
     BrowserModule,

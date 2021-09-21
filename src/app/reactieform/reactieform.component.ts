@@ -33,8 +33,7 @@ export class ReactieformComponent implements OnInit {
   }
   selectedValues(){
     this.registrationForm.patchValue({  //instead of setValue we can use patchValue
-      username: 'Pandkumar',
-      
+      username: 'Pandkumar',  
       address: {
         city: 'warangal',
         state: 'Telangana'

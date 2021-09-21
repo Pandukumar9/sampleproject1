@@ -1,0 +1,56 @@
+<p>templateform works!</p>
+
+<div class="container">
+   <div>
+      <h2>registrationform</h2>
+      <div class="alert alert-danger" *ngIf="errorMsg">
+         {{errorMsg}}
+      </div>
+     <form #myData="ngForm" *ngIf="!submitted" (ngSubmit)="onSubmit()" novalidate>
+       <div class="form-group">
+          <label for="fname">firstname:</label>
+          <input type="text" id="fname" class="form-control" name="firstname" [(ngModel)]="userdata.firstname"
+          [class.is-invalid]="name.invalid && name.touched" #name="ngModel" required>
+           <small [class.d-none]="name.valid || name.untouched" class="text-danger">Name is required</small>
+       </div>
+       <div class="form-group">
+        <label for="lname">lastname:</label>
+        <input type="text" id="lname" class="form-control" name="lastname" [(ngModel)]="userdata.lastname">
+     </div>
+     <div class="form-group">
+      <label>Mobile number:</label>
+      <input type="tel" placeholder="enter your Mobile number" class="form-control" pattern="^\d{10}$" 
+       name="phone" [(ngModel)]="userdata.phone" [class.is-invalid]="phone.invalid && phone.touched" #phone="ngModel"  required><br>
+       <!-- <small [class.d-none]="phone.valid || phone.untouched" class="text-danger">Number must be 10 digits and required</small> -->
+       <div *ngIf="phone.errors && (phone.invalid || phone.touched)">
+          <small *ngIf="phone.errors.pattern" class="text-danger">Number must be 10 digits</small>
+          <small *ngIf="phone.errors.required" class="text-danger">Number is required</small>
+       </div>
+      </div> 
+      <div class="form-group">
+         <select (blur)="validateTopic(topic.value)" (change)="validateTopic(topic.value)" class="custom-select" name="select1" [(ngModel)]="userdata.select1"
+         #topic="ngModel" [class.is-invalid]="topicHasError && topic.touched">
+           <option value='default'>Choose one..</option>
+           <option *ngFor="let x of course">{{x}}</option>
+         </select>
+         <small [class.d-none]="!topicHasError || topic.untouched" class="text-danger">Please choose a course</small>
+        </div><br>
+        <label>Gender:</label>
+        <div class="form-check">
+          <input type="radio" class="form-check-input" name="gender" value="male" [(ngModel)]="userdata.gender">
+          <label class="form-check-label">Male</label>
+        </div>
+        <div class="form-check">
+          <input type="radio" class="form-check-input" name="gender" value="female" [(ngModel)]="userdata.gender">
+          <label class="form-check-label">Female</label>
+        </div>
+     <div class="form-check">
+      <input type="checkbox" class="form-check-input" name="isActive" value="isActive" [(ngModel)]="userdata.isActive">
+      <label class="form-check-label">Remember:</label>
+    </div>
+     <button [disabled]="myData.form.invalid || topicHasError" type="submit" class="btn btn-primary">Submit</button>
+     </form>
+   </div>
+</div>
+
+<h2>{{userdata | json}}</h2>
