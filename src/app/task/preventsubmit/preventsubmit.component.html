@@ -1,0 +1,76 @@
+<p>preventsubmit works!</p>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6">
+      <h2>registrationform</h2>
+      <div class="alert alert-danger" *ngIf="errorMsg">
+         {{errorMsg}}
+      </div>
+        <form #myData="ngForm" *ngIf="!submitted" (ngSubmit)="onSubmit()" novalidate>
+          <div class="form-group">
+            <label for="id1">fullname:</label>
+            <input type="text" placeholder="enter your name" class="form-control" name="username" id="id1" [(ngModel)]="staticData.username || lowercase"
+           [class.is-invalid]="name.invalid && name.touched" #name="ngModel" required>
+           <small [class.d-none]="name.valid || name.untouched" class="text-danger">Name is required</small>
+          </div>
+          
+          <div class="form-group">
+            <label>email:</label>
+          <input type="email" placeholder="enter your email" class="form-control" name="email"
+          [class.is-invalid]="email.invalid && email.touched" #email="ngModel" [(ngModel)]="staticData.email" required>
+          </div>
+          <div class="form-group">
+            <label>Mobile number:</label>
+            <input type="tel" placeholder="enter your Mobile number" class="form-control" pattern="^\d{10}$" 
+             name="phone" [(ngModel)]="staticData.phone" [class.is-invalid]="phone.invalid && phone.touched" #phone="ngModel"  required><br>
+             <!-- <small [class.d-none]="phone.valid || phone.untouched" class="text-danger">Number must be 10 digits and required</small> -->
+             <div *ngIf="phone.errors && (phone.invalid || phone.touched)">
+                <small *ngIf="phone.errors.pattern" class="text-danger">Number must be 10 digits</small>
+                <small *ngIf="phone.errors.required" class="text-danger">Number is required</small>
+             </div>
+            </div>    
+          <div class="form-group">
+         <select (blur)="validateTopic(topic.value)" (change)="validateTopic(topic.value)" class="custom-select" name="select1" [(ngModel)]="staticData.select1"
+         #topic="ngModel" [class.is-invalid]="topicHasError && topic.touched">
+           <option value='default'>Choose one..</option>
+           <option *ngFor="let x of course">{{x}}</option>
+         </select>
+         <small [class.d-none]="!topicHasError || topic.untouched" class="text-danger">Please choose a course</small>
+        </div><br>
+        <div class="col-6">
+          <label>Gender:</label>
+          <div class="form-check">
+            <input type="radio" class="form-check-input" name="gender" value="male" [(ngModel)]="staticData.gender">
+            <label class="form-check-label">Male</label>
+          </div>
+          <div class="form-check">
+            <input type="radio" class="form-check-input" name="gender" value="female" [(ngModel)]="staticData.gender">
+            <label class="form-check-label">Female</label>
+          </div>
+        </div><br>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" name="isActive" value="isActive" [(ngModel)]="staticData.isActive">
+          <label class="form-check-label">Remember:</label>
+        </div>
+          <button [disabled]="myData.form.invalid || topicHasError" type="submit" class="btn btn-primary">submit</button>
+        </form>
+    </div>
+    <div class="col-md-6"><br><br><br>
+        <!-- {{myData.value | json}} -->
+        <br><br>
+        {{staticData | json}}
+        <br><br>
+        <!-- {{myData.form.valid}} -->
+
+  <div>
+    <div>Keep an eye on the console while clicking the button...</div>
+<div>
+	<button type="button" class="btn btn-primary" [disabled]="clicked" (click)="actionMethod(); clicked = true;">Give Kitchen access</button>
+</div>
+<div>
+	<button #btn type="button" class="btn btn-primary" (click)="actionMethod(); btn.disabled = true;">Give Kitchen access</button>
+</div>
+  </div>
+      

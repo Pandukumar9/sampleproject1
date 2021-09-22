@@ -62,6 +62,7 @@ import { CreateEmployeComponent } from './employ/create-employe/create-employe.c
 import { ListEmployeComponent } from './employ/list-employe/list-employe.component';
 import { TemplateformComponent } from './forms/templateform/templateform.component';
 import { ReativeformingComponent } from './forms/reativeforming/reativeforming.component';
+import { PreventsubmitComponent } from './task/preventsubmit/preventsubmit.component';
 
 
 @NgModule({
@@ -116,7 +117,8 @@ import { ReativeformingComponent } from './forms/reativeforming/reativeforming.c
     CreateEmployeComponent,
     ListEmployeComponent,
     TemplateformComponent,
-    ReativeformingComponent
+    ReativeformingComponent,
+    PreventsubmitComponent
   ],
   imports: [
     BrowserModule,
